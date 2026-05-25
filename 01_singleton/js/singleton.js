@@ -14,7 +14,7 @@ class Singleton {
         Singleton.instance = this;
     }
 
-    getInstance() {
+    static getInstance() {
         return Singleton.instance;
     }
 
