@@ -28,7 +28,7 @@ Esto genera:
 El patrón Strategy encapsula cada algoritmo en una clase independiente y permite intercambiarlos dinámicamente.
 
 # 🧠 Estructura del patrón
-## Componentes
+# Componentes
 
 ## Strategy
 Define la interfaz común para todas las estrategias.

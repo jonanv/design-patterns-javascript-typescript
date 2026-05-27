@@ -14,3 +14,11 @@ El patrón de diseño Singleton es un patrón creacional que garantiza que una c
 El patrón de diseño Strategy es un patrón de comportamiento que permite definir una familia de algoritmos, encapsular cada uno de ellos y hacerlos intercambiables. El patrón Strategy permite que el algoritmo varíe independientemente de los clientes que lo utilizan.
 [Mas de Strategy](./02_strategy/README.md)
 
+![Strategy](./images/Strategy.png)
+
+
+## Observer Pattern
+El patrón de diseño **Observer** es un patrón de comportamiento que define una dependencia uno-a-muchos entre objetos, de modo que cuando un objeto cambia de estado, todos sus observadores son notificados automáticamente.
+[Mas de Observer](./03_observer/README.md)
+
+![Observer](./images/Observer.png)

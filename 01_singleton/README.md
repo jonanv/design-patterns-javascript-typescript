@@ -30,7 +30,7 @@ El patrón Singleton:
 ---
 
 # 🧠 Estructura del patrón
-## Componentes
+# Componentes
 
 ### Singleton
 Clase responsable de:
