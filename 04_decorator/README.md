@@ -23,6 +23,7 @@ CafeConChocolate
 CafeConChocolateYLeche
 CafeConChocolateLecheAzucar
 ```
+La cantidad de clases crece rápidamente.
 
 # ✅ Solución
 El patrón Decorator:
@@ -114,9 +115,13 @@ pedido = Chocolate(pedido)
 pedido = Azucar(pedido)
 
 print("Costo total:", pedido.costo())
+```
+
 ▶️ Salida
 Costo total: 11
-💻 Ejemplo real: Sistema de logs
+
+# 💻 Ejemplo real: Sistema de logs
+```python
 class Logger(object):
 
     def log(self, mensaje):
