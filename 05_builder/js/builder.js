@@ -49,6 +49,11 @@ class PersonBuilder {
         return this;
     }
 
+    setCity(city) {
+        this.city = city;
+        return this;
+    }
+
     addHobbies(hobby) {
         this.hobbies.push(hobby);
         return this;
@@ -63,5 +68,24 @@ class PersonBuilder {
             this.city,
             this.hobbies
         );
+
+        this.reset();
+        return person;
     }
 }
+
+const giovanniBuilder = new PersonBuilder();
+const giovanni = giovanniBuilder.setFirstName('Giovanni')
+                                .setLastName('Vargas')
+                                .setAge(34)
+                                .setCountry('Colombia')
+                                .setCity('Manizales')
+                                .addHobbies('Programar')
+                                .addHobbies('Jugar');
+console.log(giovanni.build());
+
+const juanBuilder = new PersonBuilder().setFirstName('Juan')
+                                        .setLastName('Vargas')
+                                        .setCity('Manizales')
+                                        .addHobbies('Jugar futbol');
+console.log(juanBuilder.build());
