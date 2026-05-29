@@ -22,3 +22,15 @@ El patrón de diseño **Observer** es un patrón de comportamiento que define un
 [Mas de Observer](./03_observer/README.md)
 
 ![Observer](./images/Observer.png)
+
+## Decorator Pattern
+El patrón de diseño **Decorator** es un patrón estructural que permite agregar funcionalidades adicionales a un objeto dinámicamente sin modificar su estructura original.
+[Mas de Decorator](./04_decorator/README.md)
+
+![Decorator](./images/Decorator.png)
+
+## Builder Pattern
+El patrón de diseño **Builder** es un patrón creacional que permite construir objetos complejos paso a paso, separando el proceso de construcción de la representación final del objeto.
+[Mas de Builder](./05_builder/README.md)
+
+![Builder](./images/Builder.png)
