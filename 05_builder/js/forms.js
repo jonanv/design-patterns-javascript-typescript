@@ -98,6 +98,17 @@ class BuilderForm {
     }
 }
 
+class FormDirector {
+
+    constructor(formBuilder) {
+        this.setBuilder(formBuilder);
+    }
+
+    setBuilder(formBuilder) {
+        this.formBuilder = formBuilder;
+    }
+}
+
 const builderForm1 = new BuilderForm();
 const formPeople = builderForm1.setAction('add.php')
                             .setText('firstName', 'Nombres')
