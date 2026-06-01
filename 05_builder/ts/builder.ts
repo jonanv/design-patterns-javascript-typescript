@@ -107,4 +107,53 @@ class NormalPersonBuilder implements IPersonBuilder {
     }
 }
 
+class PersonDirector {
+    private personBuilder!: IPersonBuilder;
 
+    constructor(personBuilder: IPersonBuilder) {
+        this.setPersonBuilder(personBuilder);
+    }
+
+    setPersonBuilder(personBuilder: IPersonBuilder) {
+        this.personBuilder = personBuilder;
+    }
+
+    createSimplePerson(firstName: string, lastName: string) {
+        this.personBuilder.setFistName(firstName)
+                        .setLastName(lastName);
+    }
+}
+
+
+// creacion 1
+const personBuilder = new NormalPersonBuilder();
+const giovanni = personBuilder.setFistName('Giovanni')
+                            .setLastName('Vargas')
+                            .setAge(34)
+                            .setCountry('Çolombia')
+                            .setCity('Manizales')
+                            .addHobbies('Jugar futbol')
+                            .addHobbies('Jugar videogames')
+                            .build();
+console.log(giovanni);
+
+// creacion 1
+const juan = personBuilder.setFistName('Juan')
+                            .setLastName('Vargas')
+                            .setAge(32)
+                            .setCountry('Çolombia')
+                            .setCity('Manizales')
+                            .addHobbies('Jugar futbol')
+                            .addHobbies('Dormir')
+                            .build();
+console.log(juan);
+
+// creacion con director
+const director = new PersonDirector(personBuilder);
+director.createSimplePerson('John', 'Doe');
+const johndoe = personBuilder.build();
+console.log(johndoe);
+
+director.createSimplePerson('John', 'Cena');
+const johncena = personBuilder.build();
+console.log(johncena);
