@@ -107,6 +107,10 @@ class FormDirector {
     setBuilder(formBuilder) {
         this.formBuilder = formBuilder;
     }
+
+    createPeopleForm() {
+        
+    }
 }
 
 const builderForm1 = new BuilderForm();
