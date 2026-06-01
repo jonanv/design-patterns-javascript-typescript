@@ -109,12 +109,22 @@ class FormDirector {
     }
 
     createPeopleForm() {
-        
+        this.formBuilder.reset();
+        this.formBuilder.setText('firstName', 'Nombre')
+                        .setText('lastName', 'Apellido');
+    }
+
+    createContactForm() {
+        this.formBuilder.reset();
+        this.formBuilder.setText('nameInterest', 'Nombre de interesado')
+                        .setText('message', 'Mensaje')
+                        .setText('emil', 'Correo electronico')
+                        .setText('phone', 'Telefono');
     }
 }
 
-const builderForm1 = new BuilderForm();
-const formPeople = builderForm1.setAction('add.php')
+const formBuilder = new BuilderForm();
+const formPeople = formBuilder.setAction('add.php')
                             .setText('firstName', 'Nombres')
                             .setText('lastName', 'Apellidos')
                             .setText('email', 'E-mail')
@@ -130,3 +140,13 @@ const formMail = new BuilderForm().setAction('send.php')
                                 .build();
 console.log(formMail);
 form2.innerHTML = formMail.getContent();
+
+const director = new FormDirector(formBuilder);
+director.createPeopleForm();
+form3.innerHTML = formBuilder.build().getContent();
+
+director.createPeopleForm();
+form4.innerHTML = formBuilder.build().getContent();
+
+director.createContactForm();
+form5.innerHTML = formBuilder.build().getContent();
