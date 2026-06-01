@@ -54,7 +54,7 @@ class NormalPersonBuilder implements IPersonBuilder {
         this.reset();
     }
 
-    private reset(): void {
+    public reset(): void {
         this.firstName = '';
         this.lastName = '';
         this.age = 0;
@@ -68,32 +68,32 @@ class NormalPersonBuilder implements IPersonBuilder {
         return this;
     }
 
-    setLastName(lastName: string): IPersonBuilder {
+    public setLastName(lastName: string): IPersonBuilder {
         this.lastName = lastName;
         return this;
     }
 
-    setAge(age: number): IPersonBuilder {
+    public setAge(age: number): IPersonBuilder {
         this.age = age;
         return this;
     }
 
-    setCountry(country: string): IPersonBuilder {
+    public setCountry(country: string): IPersonBuilder {
         this.country = country;
         return this;
     }
 
-    setCity(city: string): IPersonBuilder {
+    public setCity(city: string): IPersonBuilder {
         this.city = city;
         return this;
     }
 
-    addHobbies(hobby: string): IPersonBuilder {
+    public addHobbies(hobby: string): IPersonBuilder {
         this.hobbies.push(hobby);
         return this;
     }
 
-    build(): Person {
+    public build(): Person {
         const person = new Person(
             this.firstName, 
             this.lastName, 
