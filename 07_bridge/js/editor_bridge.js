@@ -22,20 +22,20 @@ class HTMLPainterImplementor {
     }
 
     setWidth(width) {
-        this.width = width+'px';
+        this.width = width + 'px';
     }
 
     setHeight(height) {
-        this.height = height+'px'; 
+        this.height = height + 'px';
     }
 
     setColor(color) {
-        this.color = color; 
+        this.color = color;
     }
 
     print() {
         this.container.innerHTML = `
-            <div style="width: ${ this.width }; height: ${ this.height }; background: ${ this.color };">
+            <div style="width: ${this.width}; height: ${this.height}; background: ${this.color };">
 
             </div>
         `;
@@ -58,11 +58,11 @@ class CanvasPainterImplementor {
     }
 
     setHeight(height) {
-        this.height = height; 
+        this.height = height;
     }
 
     setColor(color) {
-        this.color = color; 
+        this.color = color;
     }
 
     print() {
