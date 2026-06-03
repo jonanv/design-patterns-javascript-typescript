@@ -12,6 +12,19 @@ class EditorAbstraction {
     }
 }
 
+class EditorWidthClearImplementor extends EditorAbstraction {
+
+    constructor(implementor) {
+        super(implementor);
+    }
+
+    clear() {
+        this.implementor.setWidth(0);
+        this.implementor.setHeight(0);
+        this.implementor.print();
+    }
+}
+
 class HTMLPainterImplementor {
 
     constructor(container) {
@@ -73,7 +86,10 @@ class CanvasPainterImplementor {
 }
 
 // const editor = new EditorAbstraction(new HTMLPainterImplementor(content));
-const editor = new EditorAbstraction(new CanvasPainterImplementor(canvas));
+// const editor = new EditorAbstraction(new CanvasPainterImplementor(canvas));
+
+// const editor = new EditorWidthClearImplementor(new HTMLPainterImplementor(content));
+const editor = new EditorWidthClearImplementor(new CanvasPainterImplementor(canvas));
 
 range.addEventListener("input", (e) => {
     const width = e.target.value;
@@ -89,4 +105,8 @@ editorColor.addEventListener("input", (e) => {
     const color = e.target.value;
 
     editor.print(width, height, color);
+});
+
+buttonBorrar.addEventListener("click", () => {
+    editor.clear();
 });
