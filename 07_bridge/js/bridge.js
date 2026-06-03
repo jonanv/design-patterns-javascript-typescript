@@ -24,6 +24,27 @@ class Base64EncoderImplementor {
     }
 }
 
+class HTMLEncoderImplementor {
+
+    encode(str) {
+        return str.split('.').reduce((ac, e) => {
+            return ac + `<p>${ e.trim() }</p>`;
+        }, '');
+    }
+
+    decode(str) {
+        return str.split('</p>').reduce((ac, e) => {
+            return e !== ''
+                    ? ac + e.replace('<p>', '') + '. '
+                    : ac + '';
+        }, '');
+    }
+}
+
 const encode1 =  new EncoderTextAbastraction(new Base64EncoderImplementor());
 console.log(encode1.encode('Pato'));
 console.log(encode1.decode('UGF0bw=='));
+
+const encoder2 = new EncoderTextAbastraction(new HTMLEncoderImplementor());
+console.log(encoder2.encode('Esto es un texto. Y aqui comienza otro. Y hay otro mas'));
+console.log(encoder2.decode('<p>Esto es un texto</p><p>Y aqui comienza otro</p><p>Y hay otro mas</p>'));
