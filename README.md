@@ -37,6 +37,12 @@ El patrón de diseño **Builder** es un patrón creacional que permite construir
 
 ## State Pattern
 El patrón de diseño **State** es un patrón de comportamiento que permite que un objeto modifique su comportamiento cuando cambia su estado interno. Desde el exterior, parece que el objeto cambia de clase.
-[Mas de State](./06_state//README.md)
+[Mas de State](./06_state/README.md)
 
 ![State](./images/State.png)
+
+## Bridge Pattern
+El patrón de diseño **Bridge** es un patrón estructural que desacopla una abstracción de su implementación para que ambas puedan evolucionar independientemente.
+[Mas de Bridge](./07_bridge/README.md)
+
+![Bridge](./images/Bridge.png)
